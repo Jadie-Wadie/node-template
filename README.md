@@ -49,12 +49,12 @@ npm start
 Build a [Docker](https://www.docker.com/) image. This does not run `npm build`, so you'll need to do that first.
 
 ```sh
-docker build -t <your username>/node-web-app .
+docker build -t <your username>/react-template .
 ```
 
 ### Misc
 
-Remove the [Parcel](https://parceljs.org/) cache directory, and clear the build folder.
+Remove the [Parcel](https://parceljs.org/) cache directory, and clear the `dist` folder.
 
 ```
 npm run rimraf
