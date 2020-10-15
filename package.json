@@ -1,0 +1,63 @@
+{
+	"name": "react-template",
+	"version": "1.0.0",
+	"description": "A template for apps with a React frontend and a NodeJS backend.",
+	"keywords": [
+		"react",
+		"node",
+		"docker"
+	],
+	"homepage": "https://github.com/Jadie-Wadie/react-template#readme",
+	"bugs": {
+		"url": "https://github.com/Jadie-Wadie/react-template/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Jadie-Wadie/react-template.git"
+	},
+	"license": "MIT",
+	"author": "Jadie-Wadie",
+	"main": "dist/server/index.js",
+	"scripts": {
+		"build": "npm run rimraf && npm run build:client && npm run build:server",
+		"build:client": "parcel build public/index.html -d dist/client",
+		"build:server": "tsc -p server/tsconfig.json",
+		"lint": "prettier -w * && sort-package-json",
+		"rimraf": "rimraf dist .cache",
+		"start": "node dist/server/index.js",
+		"start:client": "concurrently -r -k \"tsc -p src/tsconfig.json --watch --noEmit\" \"npm:watch:client -s -- --log-level 0\"",
+		"start:server": "nodemon",
+		"watch:client": "PARCEL_AUTOINSTALL=false parcel public/index.html -d dist/client --open"
+	},
+	"nodemonConfig": {
+		"exec": "tsc -p server/tsconfig.json && node dist/server/index.js",
+		"ext": "ts",
+		"watch": [
+			"server"
+		]
+	},
+	"dependencies": {
+		"colors": "^1.4.0",
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.11.6",
+		"@types/colors": "^1.2.1",
+		"@types/cors": "^2.8.7",
+		"@types/express": "^4.17.8",
+		"@types/react": "^16.9.51",
+		"@types/react-dom": "^16.9.8",
+		"babel-plugin-module-resolver": "^4.0.0",
+		"concurrently": "^5.3.0",
+		"nodemon": "^2.0.4",
+		"parcel-bundler": "^1.12.4",
+		"prettier": "^2.1.2",
+		"rimraf": "^3.0.2",
+		"sass": "^1.27.0",
+		"sort-package-json": "^1.46.0",
+		"typescript": "^4.0.3"
+	}
+}
