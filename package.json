@@ -1,7 +1,7 @@
 {
 	"name": "react-template",
 	"version": "1.0.0",
-	"description": "A template for apps with a React frontend and a NodeJS backend.",
+	"description": "A template for React + NodeJS projects.",
 	"keywords": [
 		"react",
 		"node",

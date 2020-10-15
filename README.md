@@ -1,34 +1,34 @@
 # React Template
 
-> A React + Node JS template.
+> A template for [React](https://reactjs.org/) + [NodeJS](https://nodejs.org/en/) projects.
 
 ## Introduction
 
-This template combines a Parcel based React client with a TypeScript NodeJS server.
-It also includes Docker configuration.
+This template combines a [Parcel](https://parceljs.org/) based [React](https://reactjs.org/) client with a [Express](https://expressjs.com/) based [NodeJS](https://nodejs.org/en/) server, both written in [TypeScript](https://www.typescriptlang.org/).
 
-The included server will host the built version of the client.
+It also includes [Prettier](https://prettier.io/) and [Docker](https://www.docker.com/) configuration.
 
-By default, the client is styled with Pico CSS. To change this, remove the `<link>` from [`index.html`](/public/index.html).
+By default, the client is styled with [Pico CSS](https://picocss.com/). To remove this, remove the `<link>` from [`index.html`](/public/index.html).
 
 ## Usage
 
+Create a [new project](https://github.com/Jadie-Wadie/react-template/generate) based on this template.
+
 ### Development
 
-Run the client in development mode (hot reload with Parcel).
-The parcel output is hidden by the Typescript compiler.
+Run the client in development mode. The [Parcel](https://parceljs.org/) output is hidden by the [TypeScript](https://www.typescriptlang.org/) compiler.
 
 ```sh
 npm run start:client
 ```
 
-Run the server with nodemon.
+Run the server with [nodemon](https://nodemon.io/).
 
 ```sh
 npm run start:server
 ```
 
-You'll need to run both if you want to test an API.
+You'll need both if you want to test an API.
 
 ### Production
 
@@ -46,10 +46,24 @@ npm start
 
 ### Docker
 
-Build a docker image. This does not run `npm build`, so you'll need to do that first.
+Build a [Docker](https://www.docker.com/) image. This does not run `npm build`, so you'll need to do that first.
 
 ```sh
 docker build -t <your username>/node-web-app .
+```
+
+### Misc
+
+Remove the [Parcel](https://parceljs.org/) cache directory, and clear the build folder.
+
+```
+npm run rimraf
+```
+
+Run [Prettier](https://prettier.io/) and sort the [`package.json`](package.json)
+
+```
+npm run lint
 ```
 
 ## License
