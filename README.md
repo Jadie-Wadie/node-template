@@ -1,7 +1,6 @@
 # React Template
 
-![Version](https://img.shields.io/github/package-json/v/Jadie-Wadie/react-template)
-![Dependencies](https://img.shields.io/librariesio/github/Jadie-Wadie/react-template)
+![Release](https://img.shields.io/github/package-json/v/Jadie-Wadie/react-template)
 ![License](https://img.shields.io/github/license/Jadie-Wadie/react-template)
 
 > A template for [React](https://reactjs.org/) + [NodeJS](https://nodejs.org/en/) projects.
