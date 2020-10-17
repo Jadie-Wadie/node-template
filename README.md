@@ -1,21 +1,19 @@
-# React Template
+# Parcel Template
 
-![Release](https://img.shields.io/github/package-json/v/Jadie-Wadie/react-template)
-![License](https://img.shields.io/github/license/Jadie-Wadie/react-template)
+![Release](https://img.shields.io/github/package-json/v/Jadie-Wadie/parcel-template)
+![License](https://img.shields.io/github/license/Jadie-Wadie/parcel-template)
 
-> A template for [React](https://reactjs.org/) + [NodeJS](https://nodejs.org/en/) projects.
+> A template for [Parcel](https://parceljs.org/) + [NodeJS](https://nodejs.org/en/) projects.
 
 ## Introduction
 
-This template combines a [Parcel](https://parceljs.org/) based [React](https://reactjs.org/) client with a [Express](https://expressjs.com/) based [NodeJS](https://nodejs.org/en/) server, both written in [TypeScript](https://www.typescriptlang.org/).
+This template combines a [Parcel](https://parceljs.org/) client with a [NodeJS](https://nodejs.org/en/) server, both written in [TypeScript](https://www.typescriptlang.org/).
 
 It also includes [Prettier](https://prettier.io/) and [Docker](https://www.docker.com/) configuration.
 
-By default, the client is styled with [Pico CSS](https://picocss.com/). To remove this, remove the `<link>` from [`index.html`](/public/index.html).
-
 ## Usage
 
-Create a [new project](https://github.com/Jadie-Wadie/react-template/generate) based on this template.
+Create a [new project](https://github.com/Jadie-Wadie/parcel-template/generate) based on this template.
 
 ### Development
 
@@ -52,7 +50,7 @@ npm start
 Build a [Docker](https://www.docker.com/) image. This does not run `npm build`, so you'll need to do that first.
 
 ```sh
-docker build -t <your username>/react-template .
+docker build -t <your username>/<your app name> .
 ```
 
 ### Misc

@@ -1,13 +1,14 @@
 {
 	"extends": "../tsconfig.json",
+
 	"compilerOptions": {
 		"lib": ["dom", "dom.iterable"],
 
-		"jsx": "react",
+		// "jsx": "react",
 
 		"baseUrl": ".",
 		"paths": {
-			"~/*": ["./*"]
+			"~*": ["./*"]
 		}
 	}
 }

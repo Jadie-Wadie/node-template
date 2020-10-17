@@ -1,0 +1,10 @@
+{
+	"$schema": "https://json.schemastore.org/nodemon",
+
+	"exec": "tsc -p server/tsconfig.json && node dist/server/index.js",
+
+	"watch": ["server"],
+	"ext": "ts",
+
+	"quiet": true
+}

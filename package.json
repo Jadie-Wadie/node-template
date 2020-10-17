@@ -1,19 +1,20 @@
 {
-	"name": "react-template",
+	"name": "parcel-template",
 	"version": "1.0.1",
-	"description": "A template for React + NodeJS projects.",
+	"description": "A template for Parcel + NodeJS projects.",
 	"keywords": [
-		"react",
 		"node",
-		"docker"
+		"docker",
+		"parcel",
+		"typescript"
 	],
-	"homepage": "https://github.com/Jadie-Wadie/react-template#readme",
+	"homepage": "https://github.com/Jadie-Wadie/parcel-template#readme",
 	"bugs": {
-		"url": "https://github.com/Jadie-Wadie/react-template/issues"
+		"url": "https://github.com/Jadie-Wadie/parcel-template/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Jadie-Wadie/react-template.git"
+		"url": "git+https://github.com/Jadie-Wadie/parcel-template.git"
 	},
 	"license": "MIT",
 	"author": "Jadie-Wadie",
@@ -29,27 +30,17 @@
 		"start:server": "nodemon",
 		"watch:client": "PARCEL_AUTOINSTALL=false parcel public/index.html -d dist/client --open"
 	},
-	"nodemonConfig": {
-		"exec": "tsc -p server/tsconfig.json && node dist/server/index.js",
-		"ext": "ts",
-		"watch": [
-			"server"
-		]
-	},
 	"dependencies": {
 		"colors": "^1.4.0",
 		"cors": "^2.8.5",
 		"express": "^4.17.1",
-		"react": "^16.14.0",
-		"react-dom": "^16.14.0"
+		"parcel-plugin-typescript": "^1.0.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.12.0",
 		"@types/colors": "^1.2.1",
 		"@types/cors": "^2.8.7",
 		"@types/express": "^4.17.8",
-		"@types/react": "^16.9.51",
-		"@types/react-dom": "^16.9.8",
 		"babel-plugin-module-resolver": "^4.0.0",
 		"concurrently": "^5.3.0",
 		"nodemon": "^2.0.4",

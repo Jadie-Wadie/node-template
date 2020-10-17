@@ -20,4 +20,4 @@ server.listen(3000);
 
 // Log
 console.log(`Server running at ${'http://localhost:3000'.cyan}`);
-console.log(`\u2728  Awake in ${(Date.now() - start) / 1000}s.`.green);
+console.log(`\u2728  Awake in ${Date.now() - start}ms.\n`.green);
