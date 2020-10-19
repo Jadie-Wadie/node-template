@@ -1,54 +1,50 @@
 {
-	"name": "parcel-template",
+	"name": "node-template",
 	"version": "1.1.1",
-	"description": "A template for Parcel + NodeJS projects.",
-	"keywords": [
-		"nodejs",
-		"docker",
-		"parcel",
-		"typescript"
-	],
-	"homepage": "https://github.com/Jadie-Wadie/parcel-template#readme",
-	"bugs": {
-		"url": "https://github.com/Jadie-Wadie/parcel-template/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/Jadie-Wadie/parcel-template.git"
-	},
-	"license": "MIT",
-	"author": "Jadie-Wadie",
-	"main": "dist/server/index.js",
+	"private": true,
 	"scripts": {
-		"build": "npm run rimraf && npm run build:client && npm run build:server",
-		"build:client": "parcel build public/index.html -d dist/client",
+		"build": "npm run clean && npm run build:client && npm run build:server",
+		"build:client": "react-scripts build && mv build client && mkdir -p build && mv client build/client",
 		"build:server": "tsc -p server/tsconfig.json",
+		"clean": "rm -rf build",
 		"lint": "prettier -w * && sort-package-json",
-		"rimraf": "rimraf dist .cache",
-		"start": "node dist/server/index.js",
-		"start:client": "concurrently -r -k \"tsc -p src/tsconfig.json --watch --noEmit\" \"npm:watch:client -s -- --log-level 0\"",
-		"start:server": "nodemon",
-		"watch:client": "PARCEL_AUTOINSTALL=false parcel public/index.html -d dist/client --open"
+		"start:client": "react-scripts start",
+		"start:server": "nodemon"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"eslintConfig": {
+		"extends": "react-app"
 	},
 	"dependencies": {
 		"colors": "^1.4.0",
 		"cors": "^2.8.5",
 		"express": "^4.17.1",
-		"parcel-plugin-typescript": "^1.0.0"
+		"react": "^16.14.0",
+		"react-dom": "^16.14.0"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.12.0",
-		"@types/colors": "^1.2.1",
-		"@types/cors": "^2.8.7",
+		"@types/cors": "^2.8.8",
 		"@types/express": "^4.17.8",
-		"babel-plugin-module-resolver": "^4.0.0",
-		"concurrently": "^5.3.0",
-		"nodemon": "^2.0.4",
-		"parcel-bundler": "^1.12.4",
+		"@types/node": "^12.12.68",
+		"@types/react": "^16.9.53",
+		"@types/react-dom": "^16.9.8",
+		"node-sass": "^4.14.1",
+		"nodemon": "^2.0.6",
 		"prettier": "^2.1.2",
-		"rimraf": "^3.0.2",
-		"sass": "^1.27.0",
+		"react-scripts": "3.4.3",
 		"sort-package-json": "^1.46.0",
-		"typescript": "^4.0.3"
-	}
+		"typescript": "^3.7.5"
+	},
+	"proxy": "http://localhost:3000/"
 }

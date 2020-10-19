@@ -1,13 +1,13 @@
-# Parcel Template
+# Node Template
 
-![Release](https://img.shields.io/github/package-json/v/Jadie-Wadie/parcel-template)
-![License](https://img.shields.io/github/license/Jadie-Wadie/parcel-template)
+![Release](https://img.shields.io/github/package-json/v/Jadie-Wadie/node-template)
+![License](https://img.shields.io/github/license/Jadie-Wadie/node-template)
 
-> A template for [Parcel](https://parceljs.org/) + [NodeJS](https://nodejs.org/en/) projects.
+> A template for [NodeJS](https://nodejs.org/en/) projects.
 
 ## Introduction
 
-This template combines a [Parcel](https://parceljs.org/) client with a [NodeJS](https://nodejs.org/en/) server, both written in [TypeScript](https://www.typescriptlang.org/).
+This template combines a [React](https://reactjs.org/) client with a [NodeJS](https://nodejs.org/en/) server, both written in [TypeScript](https://www.typescriptlang.org/).
 
 It also includes [Prettier](https://prettier.io/) and [Docker](https://www.docker.com/) configuration.
 
@@ -17,7 +17,7 @@ Create a [new project](https://github.com/Jadie-Wadie/parcel-template/generate) 
 
 ### Development
 
-Run the client in development mode. The [Parcel](https://parceljs.org/) output is hidden by the [TypeScript](https://www.typescriptlang.org/) compiler.
+Run the client in development mode.
 
 ```sh
 npm run start:client
@@ -55,13 +55,13 @@ docker build -t <your username>/<your app name> .
 
 ### Misc
 
-Remove the [Parcel](https://parceljs.org/) cache directory, and clear the `dist` folder.
+Remove the `build` directory.
 
 ```
-npm run rimraf
+npm run clean
 ```
 
-Run [Prettier](https://prettier.io/) and sort the [`package.json`](package.json)
+Run [Prettier](https://prettier.io/) and sort the [`package.json`](package.json).
 
 ```
 npm run lint
