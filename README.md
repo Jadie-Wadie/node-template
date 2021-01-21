@@ -8,7 +8,7 @@
 
 This is a template for [Node.js](https://nodejs.org/en/) projects written in [TypeScript](https://www.typescriptlang.org/).
 
-It includes [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) configuration, as well as [husky](https://typicode.github.io/husky/#/) for managing git hooks.
+It includes [ESLint](https://eslint.org/) configuration, as well as [husky](https://typicode.github.io/husky/#/) for managing git hooks.
 
 It enforces [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) with [commitlint](https://commitlint.js.org/#/).
 
