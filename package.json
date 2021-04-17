@@ -2,7 +2,7 @@
 	"name": "react-express-template",
 	"scripts": {
 		"api": "nodemon",
-		"build": "react-scripts build",
+		"build": "./scripts/build.sh",
 		"lint": "sort-package-json",
 		"start": "react-scripts start"
 	},
