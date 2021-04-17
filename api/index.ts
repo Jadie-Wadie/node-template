@@ -1,6 +1,5 @@
 // Import
 import path from 'path';
-import fs from 'fs';
 
 import minimist from 'minimist';
 import express from 'express';
@@ -24,6 +23,9 @@ async function main() {
 
 	// Express
 	const app = express();
+
+	// React
+	app.use(express.static(path.resolve(__dirname, 'public')));
 
 	// Load Routes
 	const routes = getFiles(path.resolve(__dirname, 'routes'));
