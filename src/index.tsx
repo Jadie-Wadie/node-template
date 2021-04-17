@@ -14,11 +14,13 @@ const Root: React.FC = () => {
 	useEffect(() => {
 		const interval = setInterval(getPing, 1000);
 		return () => clearInterval(interval);
-	},[]);
+	}, []);
 
 	// Get Ping
 	const getPing = async () => {
-		setCount((await axios.get('/api/count')).data.count);
+		axios.get('/api/count')
+			.then(res => setCount(res.data.count))
+			.catch(console.error);
 	}
 
 	return <p>{'\u2728'} Count: {count}</p>;
