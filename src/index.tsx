@@ -1,10 +1,27 @@
 // Import
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
+
+import axios from 'axios';
+
+import './styles/global.scss';
 
 // Root Component
 const Root: React.FC = () => {
-	return <h4>Hello, world!</h4>;
+	const [count, setCount] = useState(0);
+
+	// Interval
+	useEffect(() => {
+		const interval = setInterval(getPing, 1000);
+		return () => clearInterval(interval);
+	},[]);
+
+	// Get Ping
+	const getPing = async () => {
+		setCount((await axios.get('/api/count')).data.count);
+	}
+
+	return <p>{'\u2728'} Count: {count}</p>;
 }
 
 // Render to DOM
