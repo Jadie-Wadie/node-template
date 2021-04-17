@@ -1,18 +1,16 @@
 # Node Template
 
-![License](https://img.shields.io/github/license/ja1den/node-template)
-
-> A template for [Node.js](https://nodejs.org/en/) projects.
+> My template for [Node.js](https://nodejs.org/en/) projects.
 
 ## Introduction
 
 This is a template for [Node.js](https://nodejs.org/en/) projects written in [TypeScript](https://www.typescriptlang.org/).
 
-It includes [ESLint](https://eslint.org/) configuration, as well as [husky](https://typicode.github.io/husky/#/) for managing git hooks.
+It includes an [ESLint](https://eslint.org/) configuration, as well as [husky](https://typicode.github.io/husky/#/) for managing git hooks.
 
 It enforces [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) with [commitlint](https://commitlint.js.org/#/).
 
-Finally, the template includes a [Dockerfile](Dockerfile) for building a container.
+It also includes a [Dockerfile](Dockerfile).
 
 ## Usage
 
@@ -40,7 +38,7 @@ Use [Commitizen](http://commitizen.github.io/cz-cli/) to generate your commit me
 npm run commit
 ```
 
-Build the [Docker](https://www.docker.com/) image.
+Build a [Docker](https://www.docker.com/) image.
 
 ```sh
 docker build . -t ja1den/node-template
