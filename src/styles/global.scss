@@ -10,12 +10,6 @@
 	font-family: 'Roboto';
 }
 
-/* Body */
-
-body, #root {
-	height: 100vh;
-}
-
 /* Page */
 
 #root {
@@ -23,6 +17,8 @@ body, #root {
 
 	justify-content: center;
 	align-items: center;
+
+	height: 100vh;
 
 	p {
 		font-size: 32px;

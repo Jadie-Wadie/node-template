@@ -8,22 +8,15 @@ import './styles/global.scss';
 
 // Root Component
 const Root: React.FC = () => {
-	const [count, setCount] = useState(0);
+	const [color, setColor] = useState<string>('transparent');
 
-	// Interval
 	useEffect(() => {
-		const interval = setInterval(getPing, 1000);
-		return () => clearInterval(interval);
+		axios.get('/api/color')
+			.then(res => setColor(res.data.color))
+			.catch(console.error);
 	}, []);
 
-	// Get Ping
-	const getPing = async () => {
-		axios.get('/api/count')
-			.then(res => setCount(res.data.count))
-			.catch(console.error);
-	}
-
-	return <p>{'\u2728'} Count: {count}</p>;
+	return <p style={{ color }}>Hello!</p>;
 }
 
 // Render to DOM
