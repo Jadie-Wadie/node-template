@@ -12,7 +12,7 @@ COPY . .
 
 RUN npm run build
 
-# # Production
+# Production
 
 FROM node:alpine
 
@@ -23,5 +23,7 @@ COPY package*.json ./
 COPY --from=0 /app/build ./build
 
 RUN npm install --production
+
+EXPOSE 3000
 
 CMD node build/index.js
