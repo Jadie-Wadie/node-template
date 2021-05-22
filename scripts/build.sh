@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # React
-npx react-scripts build > /dev/null
+npx react-scripts build
 
 mv ./build ./react
 
