@@ -1,15 +1,13 @@
 // Import
 import { Request, Response } from 'express';
 
-// Random
-function getRandom(min: number, max: number) {
-	return Math.floor(Math.random() * (max - min)) + min;
-}
+// Lib
+import getRandom from '../lib/getRandom';
 
 // Export
 export default async (_req: Request, res: Response) => {
-	// List of Colors
-	const colors = [
+	// List of Colours
+	const colours = [
 		'#FF4136',
 		'#FF851B',
 		'#FFDC00',
@@ -20,5 +18,5 @@ export default async (_req: Request, res: Response) => {
 	];
 
 	// Send Response
-	res.send({ color: colors[getRandom(0, colors.length)] });
+	res.send({ colour: colours[getRandom(0, colours.length)] });
 }
