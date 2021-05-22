@@ -8,15 +8,15 @@ import './styles/global.scss';
 
 // Root Component
 const Root: React.FC = () => {
-	const [color, setColor] = useState<string>('transparent');
+	const [colour, setColour] = useState<string>('transparent');
 
 	useEffect(() => {
-		axios.get('/api/color')
-			.then(res => setColor(res.data.color))
+		axios.get('/api/colour')
+			.then(res => setColour(res.data.colour))
 			.catch(console.error);
 	}, []);
 
-	return <p style={{ color }}>Hello!</p>;
+	return <p style={{ color: colour }}>Hello!</p>;
 }
 
 // Render to DOM
