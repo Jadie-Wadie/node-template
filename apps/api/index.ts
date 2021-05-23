@@ -7,7 +7,7 @@ import express from 'express';
 import 'colors';
 
 // Lib
-import getPaths from './lib/getPaths';
+import getPaths from 'lib/getPaths';
 
 // Main
 async function main() {
@@ -54,11 +54,13 @@ async function main() {
 		app.all('/api' + name, method);
 	}
 
+	app.use('/api', (_req, res) => res.status(404).end());
+
 	// React
-	app.use(express.static(path.resolve(__dirname, 'public')));
+	app.use(express.static(path.resolve(__dirname, '..', 'client', 'public')));
 
 	// 404
-	app.use((_req, res) => res.sendFile(path.resolve(__dirname, 'public', 'index.html')));
+	app.use((_req, res) => res.sendFile(path.resolve(__dirname, '..', 'client', 'public', 'index.html')));
 
 	// Listen
 	app.listen(port, () => {
