@@ -1,7 +1,7 @@
 {
 	"name": "react-express-template",
 	"scripts": {
-		"api": "nodemon",
+		"api": "cd apps/api && nodemon",
 		"build": "./scripts/build.sh",
 		"lint": "sort-package-json",
 		"start": "react-scripts start"

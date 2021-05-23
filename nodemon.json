@@ -1,9 +1,0 @@
-{
-	"$schema": "http://json.schemastore.org/nodemon",
-	"watch": [
-		"apps/api"
-	],
-	"ext": "*",
-	"exec": "ts-node --project apps/api/tsconfig.json -r tsconfig-paths/register -r dotenv/config apps/api/index.ts --port 4000",
-	"quiet": true
-}
