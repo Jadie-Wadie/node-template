@@ -42,7 +42,7 @@ Remove all `node_modules` directories.
 npm run clean
 ```
 
-Build a [Docker](https://www.docker.com/) image.
+Build the [Docker](https://www.docker.com/) image.
 
 ```sh
 docker build . -t ja1den/react-express-template
