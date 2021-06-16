@@ -9,8 +9,7 @@
 		"strict": true,
 		"forceConsistentCasingInFileNames": true,
 		"module": "commonjs",
-		"resolveJsonModule": true,
-		"outDir": "build"
+		"resolveJsonModule": true
 	},
 	"exclude": [
 		"node_modules"
