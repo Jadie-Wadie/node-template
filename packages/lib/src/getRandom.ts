@@ -4,9 +4,6 @@
  * @param max The maximum number, exclusive.
  * @returns The random number.
  */
-function getRandom(min: number, max: number) {
+export default function getRandom(min: number, max: number) {
 	return Math.floor(Math.random() * (max - min)) + min;
 }
-
-// Export
-export default getRandom;

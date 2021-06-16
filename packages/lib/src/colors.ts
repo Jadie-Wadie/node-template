@@ -1,5 +1,5 @@
-// List of Colours
-const colours = [
+/** Source: http://clrs.cc/ */
+export default [
 	'#FF4136',
 	'#FF851B',
 	'#FFDC00',
@@ -8,6 +8,3 @@ const colours = [
 	'#F012BE',
 	'#B10DC9'
 ];
-
-// Export
-export default colours;

@@ -2,10 +2,10 @@
 import { Request, Response } from 'express';
 
 // Lib
-import getRandom from '@shared/getRandom';
-import colours from '@shared/colours';
+import getRandom from '@lib/getRandom';
+import colors from '@lib/colors';
 
 // Export
 export default async (_req: Request, res: Response) => {
-	res.send(colours[getRandom(0, colours.length)]);
+	res.send(colors[getRandom(0, colors.length)]);
 }

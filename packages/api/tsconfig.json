@@ -1,23 +1,23 @@
 {
 	"compilerOptions": {
+		"target": "es2020",
 		"lib": [
 			"es2020"
 		],
-		"module": "commonjs",
-		"target": "es2020",
-		"strict": true,
-		"esModuleInterop": true,
 		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"strict": true,
 		"forceConsistentCasingInFileNames": true,
+		"module": "commonjs",
 		"resolveJsonModule": true,
 		"baseUrl": ".",
 		"paths": {
-			"@shared/*": [
-				"../../shared/*"
+			"@lib/*": [
+				"../lib/src/*"
 			]
 		}
 	},
-	"include": [
-		"."
+	"exclude": [
+		"node_modules"
 	]
 }

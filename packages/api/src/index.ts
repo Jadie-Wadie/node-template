@@ -7,7 +7,8 @@ import express from 'express';
 import 'colors';
 
 // Lib
-import getPaths from 'lib/getPaths';
+import getPaths from './lib/getPaths';
+import { Server } from 'http';
 
 // Main
 async function main() {
@@ -25,7 +26,7 @@ async function main() {
 	const app = express().use(express.json());
 
 	// Load Routes
-	const routes = getPaths(path.resolve(__dirname, 'routes'));
+	const routes: string[] = getPaths(path.resolve(__dirname, 'routes'));
 
 	for (const route of routes) {
 		// Route Name
@@ -57,23 +58,21 @@ async function main() {
 	app.use('/api', (_req, res) => res.status(404).end());
 
 	// React
-	app.use(express.static(path.resolve(__dirname, '..', 'client', 'public')));
+	app.use(express.static(path.resolve(__dirname, '..', '..', 'client')));
 
 	// 404
-	app.use((_req, res) => res.sendFile(path.resolve(__dirname, '..', 'client', 'public', 'index.html')));
+	app.use((_req, res) => res.sendFile(path.resolve(__dirname, '..', '..', 'client', 'index.html')));
 
 	// Listen
 	app.listen(port, () => {
 		console.log('Server running at', ('http://localhost:' + port).cyan);
-		console.log(('\u2728  Up in ' + (Date.now() - time) + 'ms.').green);
+		console.log(`\u2728  Up in ${Date.now() - time}ms.`.green);
 	});
 
 	// Handle Exit
 	for (const signal of ['SIGINT', 'SIGTERM', 'SIGUSR2'] as NodeJS.Signals[]) {
-		process.addListener(signal, () => {
-			console.log('');
-			process.exit(0);
-		});
+		process.addListener(signal, () => process.exit());
 	}
 }
 main();
+
